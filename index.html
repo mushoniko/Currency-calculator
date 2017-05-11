@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+    <head>
+        <title>currency calculator</title>
+        <meta charset="UTF-8">
+        <script src="script/angular.min.js" type="text/javascript"></script>
+        <script src="script/currency_calc.js" type="text/javascript"></script>
+        <script src="script/tab_ctrl.js" type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class = "container">
+            <div class="calculation_tables" ng-controller="CalcCtrl" data-ng-init="init()" id="mainCalc">
+                <div class="input_table">
+
+                    <h3>Configure converters</h3>
+                    
+                    <input class="input_window" ng-change="ajaxCurFunc()" type="text" ng-model="amount_input" maxlength="9" autofocus>
+                    <br>
+                    <br>
+                    <br>
+                    <select class="input_window" ng-change="ajaxCurFunc()" ng-model="from_cur" ng-options="item for item in cur_ar"  ></select>
+                    <div class="arrow" ng-click="changeSelectCur()"><img src="_images/arrow2.png" alt="" width="20" height="20"></div>
+                    <select class="input_window" ng-change="ajaxCurFunc()" ng-model="to_cur" ng-options="item for item in cur_ar"></select>
+                    
+                </div>
+                <div class="output_table">
+                    <div class="up_output">
+                        <img src="_images/calculator.png" alt="" width="10"><span>currency calculator</span>
+                        <h3><span ng-model="from_output">{{from_cur}}</span> to
+                            <span ng-model="to_output">{{to_cur}}</span></h3>
+                    </div>
+                    <div class="bottom_output">
+                        <div ng-model="amount_output">{{amount_input+" "+from_cur+"="}}</div>
+                        <div ng-model="converted_output" class="all_score"><span class="score">{{cur_val*amount_input}}</span> <span>{{to_cur}}</span></div>
+                    </div>
+                    <div class="date">{{ curDate}} UTC</div>
+                </div>
+                           </div>
+            <div id="anotherPage" class="another_page">
+                <h1>another page</h1>
+            </div>
+            <div class="tabs" ng-controller="TabsCtrl">
+                
+                <button ng-click="showCalcPage()"><img src="_images/calculator.png" alt="" width="20"></button>
+                <button ng-click="showAnotherPage()"><img src="_images/graph.png" alt="" width="20"></button>
+                <button ng-click="showAnotherPage()"><img src="_images/menu.png" alt="" width="20"></button>
+                <button ng-click="showAnotherPage()"><img src="_images/plusminus.png" alt="" width="20"></button>
+                <button ng-click="showAnotherPage()"><img src="_images/calculator.png" alt="" width="20"></button>
+            </div>
+            
+        </div>
+    </body>
+</html>

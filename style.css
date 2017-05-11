@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    font-family: verdana;
+    background-color: white;
+    overflow: hidden;
+    }
+    
+    .container{
+        width:99%;
+        min-height: 500px;
+        margin: 0 auto;
+        background-color: white;
+        
+    }
+    
+    .calculation_tables{
+        width:98%;
+        min-height:470px;
+        margin: 0 auto;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .another_page{
+        min-height:470px;
+         overflow: hidden;
+    }
+    
+    .input_table{
+        width:40%;
+        float:left;
+        height: 450px;
+           background-color: #d4d4d4;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .input_table h3{
+       text-align: left;
+       padding:10px;
+    }
+    
+    .input_window{
+        height: 40px;
+        width: 70%;
+        background-color: black;
+        color:white;
+    }
+    
+    .arrow{
+        display: flex;
+       width:10px;
+       margin:0 auto;
+    }
+    
+    .output_table{
+    width: 58%;
+    height: 440px;
+    float: right;
+    background-color: #d4d4d4;
+    padding: 5px;
+       
+    }
+    
+   .bottom_output{
+        width:70%;
+        background-color: white;
+        min-height: 100px;
+        margin: 0 auto;
+    }
+    
+    .bottom_output .all_score{
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    .bottom_output .score{
+       color: #0099ff;
+    }
+    
+    .date{
+        font-size: 0.8em;
+        float: right;
+        margin-right:15%;
+    }
+    
+    .tabs{
+        float:left;
+        margin-left: 10px;
+    }
+    
+ 
+    
+
